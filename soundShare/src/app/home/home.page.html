@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>My sound</ion-title>
+    <ion-button (click)="Logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+      <ion-button (click)="goToAddPage()">
+          <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+      </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let sound of tab">
+    <ion-card>
+      <a href={{sound.link}}>{{sound.link}}</a>
+      <ion-card-title>
+        {{sound.titre}}
+      </ion-card-title>
+      <ion-list>
+        <ion-avatar>
+          <img src="{{image.contentUrl}}">
+        </ion-avatar>
+      </ion-list>
+      <ion-card-content>
+        {{sound.description}}
+      </ion-card-content>
+      <ion-card-content>
+        {{sound.description}}
+      </ion-card-content>
+      <ion-button (click)="deleteSound(sound.id)">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-card>
+  </ion-list>
+</ion-content>

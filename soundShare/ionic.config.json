@@ -1,0 +1,7 @@
+{
+  "name": "soundShare",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

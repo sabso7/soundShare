@@ -1,0 +1,31 @@
+
+<ion-content>
+    <form #form="ngForm" (ngSubmit)="postSound(form)">
+        <ion-grid>
+          <ion-row color="grey" justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+              <div text-center>
+                <h3>New Sounds</h3>
+              </div>
+              <div padding>
+                <ion-item>
+                  <ion-input name="titre" type="titre" placeholder="titre" ngModel required></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input name="link" type="link" placeholder="link" ngModel required></ion-input>
+                  </ion-item>
+                <ion-item>
+                  <ion-input name="description" type="description" placeholder="description" ngModel required></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input name="style" type="style" placeholder="style" ngModel required></ion-input>
+                </ion-item>
+              </div>
+              <div padding>
+                <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Send</ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+</ion-content>
